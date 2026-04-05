@@ -2,6 +2,12 @@
 
 这是一个面向 Dify 的百度 AI 搜索工具插件，目标是给 Agent 一条“开箱即用”的百度外部信息补充路径。
 
+源码仓库：
+[https://github.com/jimmyzhuu/baidu_ai_search](https://github.com/jimmyzhuu/baidu_ai_search)
+
+问题反馈：
+[https://github.com/jimmyzhuu/baidu_ai_search/issues](https://github.com/jimmyzhuu/baidu_ai_search/issues)
+
 首发只保留两个工具：
 
 - `web_search`
