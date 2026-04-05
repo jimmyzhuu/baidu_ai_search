@@ -1,0 +1,39 @@
+version: 0.1.0
+type: plugin
+author: zimingzhu
+name: baidu_ai_search
+label:
+  en_US: Baidu AI Search
+  zh_Hans: 百度 AI 搜索
+description:
+  en_US: Minimal Baidu AI Search tools for web search and smart search.
+  zh_Hans: 面向 Dify 的百度 AI 搜索最小工具插件，只保留网页搜索和智能搜索两个工具。
+icon: icon.png
+icon_dark: icon.png
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    endpoint:
+      enabled: false
+    app:
+      enabled: false
+    storage:
+      enabled: false
+plugins:
+  tools:
+    - provider/baidu_ai_search.yaml
+meta:
+  version: 0.1.0
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: "1.4.0"
+created_at: 2026-04-06T12:00:00+08:00
+privacy: PRIVACY.md
+verified: false

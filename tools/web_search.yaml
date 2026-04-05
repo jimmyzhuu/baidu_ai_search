@@ -1,0 +1,38 @@
+identity:
+  name: web_search
+  author: zimingzhu
+  label:
+    en_US: Web Search
+    zh_Hans: 网页搜索
+description:
+  human:
+    en_US: Search Baidu AI Search and return normalized web results.
+    zh_Hans: 调用百度 AI Search 查询网页结果，并返回统一结构化结果。
+  llm: Search the web and return normalized results with title, url, snippet, and source.
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query
+      zh_Hans: 查询内容
+    human_description:
+      en_US: Natural language search query.
+      zh_Hans: 请输入要搜索的自然语言查询。
+    llm_description: Search query used to retrieve relevant web pages.
+    form: llm
+  - name: top_k
+    type: number
+    required: false
+    default: 5
+    label:
+      en_US: Top K
+      zh_Hans: 返回条数
+    human_description:
+      en_US: Number of web results to keep, between 1 and 10.
+      zh_Hans: 保留的网页结果数量，范围 1 到 10。
+    llm_description: Number of web results to keep. Use a small number unless the task truly needs more sources.
+    form: llm
+extra:
+  python:
+    source: tools/web_search.py

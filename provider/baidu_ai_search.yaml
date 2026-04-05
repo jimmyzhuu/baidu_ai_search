@@ -1,0 +1,35 @@
+credentials_for_provider:
+  api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: API Key
+      zh_Hans: API Key
+    placeholder:
+      en_US: Enter your Baidu AI Search API Key
+      zh_Hans: 输入您的百度 AI 搜索 API Key
+    help:
+      en_US: Get your API key from Baidu Qianfan AI Search.
+      zh_Hans: 请在百度千帆 AI Search 控制台创建并复制 API Key。
+    url: https://console.bce.baidu.com/qianfan/ais/console/apiKey
+
+identity:
+  author: zimingzhu
+  name: baidu_ai_search
+  label:
+    en_US: Baidu AI Search
+    zh_Hans: 百度 AI 搜索
+  description:
+    en_US: Minimal Baidu AI Search tools for web search and smart search.
+    zh_Hans: 面向 Dify 的百度 AI 搜索最小工具插件，只保留网页搜索和智能搜索两个工具。
+  icon: icon.png
+  tags:
+    - search
+
+tools:
+  - tools/web_search.yaml
+  - tools/smart_search.yaml
+
+extra:
+  python:
+    source: provider/baidu_ai_search.py
